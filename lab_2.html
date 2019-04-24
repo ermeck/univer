@@ -30,7 +30,9 @@
         for (i = 1; i <= n; i = i + 1) {
             document.write("<tr>")
             for (j = 1; j <= n; j = j + 1) {
-                if (i > j - 1) s = "class = r1";
+                // если находимся под главной диаганалью - фон желтый
+                if (i >= j) s = "class = r1";
+                // если нет - синий
                 else s = "class = 'r2'";
                 document.write("<td " + s + "> </td>");
             }
