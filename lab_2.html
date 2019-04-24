@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            width: 50px;
+            height: 50px;
+        }
+        .r1 {
+            background-color: yellow;
+        }
+        .r2 {
+            background-color: blue;
+        }
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var n = 10; var s;
+        document.write("<table>");
+
+        for (i = 1; i <= n; i = i + 1) {
+            document.write("<tr>")
+            for (j = 1; j <= n; j = j + 1) {
+                if (i > j - 1) s = "class = r1";
+                else s = "class = 'r2'";
+                document.write("<td " + s + "> </td>");
+            }
+            document.write("</tr>");
+        }
+
+        document.write("</table>");
+
+    </script>
+</body>
+</html>
