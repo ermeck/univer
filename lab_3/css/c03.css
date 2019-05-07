@@ -1,0 +1,9 @@
+#message {
+    width: 300px;
+    height: 100px;
+    background-color: orange;
+    font-family: Arial;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
