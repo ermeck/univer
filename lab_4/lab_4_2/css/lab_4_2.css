@@ -1,0 +1,14 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+
+body {
+    background-color: palegreen;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+input {
+    font-weight: bold;
+}
