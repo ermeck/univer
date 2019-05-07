@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 5</title>
+    <style>
+        h1 {
+            color: red;
+            text-align: center;
+        }
+        body {
+            background-color: palegreen;
+            font-weight: bold;
+        }
+        input {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function biography() {
+            var first_name = document.getElementById('first_name').value;
+            var second_name = document.getElementById('second_name').value;
+            var third_name = document.getElementById('third_name').value;
+            var year = document.getElementById('year').value;
+            var place = document.getElementById('place').value;
+            var like = document.getElementById('like').value;
+            var unlike = document.getElementById('unlike').value;
+
+            var win = window.open("", "", "width = 400, height = '500");
+            win.document.open();
+            var str = "<p>" + "Я, " + first_name + " " + second_name + " " + third_name + " родился в " + year + " году в городе " + place + "." +"</p>";
+            win.document.write(str);
+
+            str = "<p>Больше всего я люблю " + like + " и не люблю " + unlike + ". Было бы замечательно всю жизнь только " + like + ", но к сожалению приходится иногда и " + unlike + ".</p>";
+            win.document.write(str);
+
+            str = '<input type="button" value="Закрыть окно"' + ' onclick="window.close();">';
+            win.document.write(str);
+        }
+    </script>
+</head>
+<body>
+    <h1>Анкета</h1>
+    <hr>
+    <form>
+        <table>
+            <tr>
+                <td>Фамилия</td>
+                <td><input type="text" value="Айтуганов" name="first_name" id="first_name" size="30"></td>
+            </tr>
+            <tr>
+                <td>Имя</td>
+                <td><input type="text" value="Ермек" name="second_name" id="second_name" size="30"></td>
+            </tr>
+            <tr>
+                <td>Отчество</td>
+                <td><input type="text" value="Юревич" name="third_name" id="third_name" size="30"></td>
+            </tr>
+            <tr>
+                <td>Год рождения</td>
+                <td><input type="text" value="1973" name="year" id="year" size="30"></td>
+            </tr>
+            <tr>
+                <td>Место рождения</td>
+                <td><input type="text" value="Красный Яр" name="place" id="place" size="30"></td>
+            </tr>
+            <tr>
+                <td>Любимое занятие</td>
+                <td><input type="text" value="пить пиво с воблой и" name="like" id="like" size="30"></td>
+            </tr>
+            <tr>
+                <td>Нелюбимое занятие</td>
+                <td><input type="text" value="пить самогон с соседом" name="unlike" id="unlike" size="30"></td>
+            </tr>
+        </table>
+
+
+        <input type="button" value="Сформировать биографию" onclick="biography()">
+    </form>
+    <hr>
+</body>
+</html>
